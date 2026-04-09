@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(cp -r \"/c/Users/Nitro5/Desktop/portfolio-temp/\"* \"/c/Users/Nitro5/Desktop/Portfólio Tulio Orione/\")",
+      "Bash(cp \"/c/Users/Nitro5/Desktop/portfolio-temp/.gitignore\" \"/c/Users/Nitro5/Desktop/Portfólio Tulio Orione/\")",
+      "Bash(cp \"/c/Users/Nitro5/Desktop/portfolio-temp/.eslintrc.cjs\" \"/c/Users/Nitro5/Desktop/Portfólio Tulio Orione/\")",
+      "Bash(rm -rf \"/c/Users/Nitro5/Desktop/portfolio-temp\")",
+      "Bash(npm install:*)",
+      "Bash(mkdir -p src/components src/data src/styles)",
+      "Bash(rm -f src/App.css src/index.css src/assets/react.svg public/vite.svg)",
+      "Bash(npx vite:*)"
+    ]
+  }
+}
