@@ -3,8 +3,8 @@ import { motion } from "framer-motion"
 const CONTACT_LINKS = [
   {
     label: "Email",
-    value: "tulio@email.com", // TODO: email real
-    href: "mailto:tulio@email.com", // TODO: email real
+    value: "tulio@email.com",
+    href: "mailto:tulio@email.com",
   },
   {
     label: "GitHub",
@@ -13,8 +13,8 @@ const CONTACT_LINKS = [
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/tulioorione", // TODO: seu perfil
-    href: "https://linkedin.com/in/tulioorione", // TODO: link real
+    value: "linkedin.com/in/tulioorione",
+    href: "https://linkedin.com/in/tulioorione",
   },
 ]
 
@@ -24,7 +24,6 @@ export default function Contact() {
       <div className="section-divider" />
 
       <div className="section-container">
-        {/* Section label */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -36,7 +35,6 @@ export default function Contact() {
           </span>
         </motion.div>
 
-        {/* Title */}
         <motion.h2
           className="font-grotesk font-black text-5xl md:text-7xl lg:text-8xl mt-6 tracking-tight leading-[0.9]"
           initial={{ opacity: 0, y: 40 }}
@@ -47,7 +45,6 @@ export default function Contact() {
           Vamos <span className="text-outline">conversar</span>
         </motion.h2>
 
-        {/* Subtitle */}
         <motion.p
           className="text-muted text-lg md:text-xl mt-8 max-w-2xl"
           initial={{ opacity: 0, y: 20 }}
@@ -55,12 +52,10 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          {/* TODO: mensagem personalizada */}
           Aberto a oportunidades CLT, freelance e colaborações com a comunidade dev.
           Bora trocar uma ideia?
         </motion.p>
 
-        {/* Contact cards */}
         <div className="mt-20 grid sm:grid-cols-3" style={{ gap: 24 }}>
           {CONTACT_LINKS.map((link, i) => (
             <motion.a
@@ -91,7 +86,6 @@ export default function Contact() {
           ))}
         </div>
 
-        {/* CTA button */}
         <motion.div
           className="mt-16"
           initial={{ opacity: 0, y: 20 }}
@@ -100,7 +94,7 @@ export default function Contact() {
           transition={{ duration: 0.5, delay: 0.5 }}
         >
           <a
-            href="mailto:tulio@email.com" // TODO: email real
+            href="mailto:tulio@email.com"
             className="inline-block font-mono text-sm border-2 border-accent text-accent px-8 py-4 tracking-wider uppercase hover:bg-accent hover:text-black transition-colors duration-300"
           >
             Enviar email
@@ -108,7 +102,6 @@ export default function Contact() {
         </motion.div>
       </div>
 
-      {/* Footer */}
       <div style={{ marginTop: 140 }} className="border-t border-outline">
         <div className="section-container py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <span className="font-mono text-xs text-muted">

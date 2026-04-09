@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion"
 const STACK_CHIPS = ["Java", "React", "JavaScript", "Python", "HTML/CSS"]
 
 export default function Hero() {
-  const [phase, setPhase] = useState("scan") // scan → reveal → content
+  const [phase, setPhase] = useState("scan")
   const [glitch, setGlitch] = useState(false)
 
   useEffect(() => {
@@ -15,7 +15,6 @@ export default function Hero() {
     return () => timers.forEach(clearTimeout)
   }, [])
 
-  // Passive glitch every 6s
   useEffect(() => {
     if (phase !== "content") return
     const interval = setInterval(() => {
@@ -35,7 +34,6 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{ background: "rgba(0,0,0,0.7)" }}
     >
-      {/* Scan line */}
       <AnimatePresence>
         {phase === "scan" && (
           <motion.div
@@ -48,7 +46,6 @@ export default function Hero() {
         )}
       </AnimatePresence>
 
-      {/* Background grid */}
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
@@ -58,9 +55,7 @@ export default function Hero() {
         }}
       />
 
-      {/* Main content */}
       <div className="relative z-10 text-center px-6">
-        {/* TÚLIO — drops down */}
         <AnimatePresence>
           {(phase === "reveal" || phase === "content") && (
             <motion.h1
@@ -74,7 +69,6 @@ export default function Hero() {
           )}
         </AnimatePresence>
 
-        {/* ORIONE — outline, rises up */}
         <AnimatePresence>
           {(phase === "reveal" || phase === "content") && (
             <motion.h1
@@ -88,7 +82,6 @@ export default function Hero() {
           )}
         </AnimatePresence>
 
-        {/* Badge — slides in */}
         <AnimatePresence>
           {phase === "content" && (
             <motion.div
@@ -104,7 +97,6 @@ export default function Hero() {
           )}
         </AnimatePresence>
 
-        {/* Stack chips */}
         <AnimatePresence>
           {phase === "content" && (
             <motion.div
@@ -128,7 +120,6 @@ export default function Hero() {
           )}
         </AnimatePresence>
 
-        {/* CTA */}
         <AnimatePresence>
           {phase === "content" && (
             <motion.div
@@ -154,7 +145,6 @@ export default function Hero() {
         </AnimatePresence>
       </div>
 
-      {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 w-full h-32 bg-linear-to-t from-void to-transparent" />
     </section>
   )

@@ -28,13 +28,11 @@ export default function Navbar() {
       transition={{ duration: 0.6, delay: 2.5 }}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
         <a href="#hero" className="font-grotesk font-black text-xl tracking-tight group">
           <span className="text-accent">T</span>
           <span className="text-white group-hover:text-accent transition-colors">.O</span>
         </a>
 
-        {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
           {NAV_LINKS.map((link) => (
             <a
@@ -47,7 +45,6 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden flex flex-col gap-1.5 cursor-pointer"
@@ -59,7 +56,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div

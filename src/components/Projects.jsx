@@ -195,9 +195,8 @@ export default function Projects() {
         el.style.transform = `translate(-50%, -50%) rotateY(${cardAngle}deg) translateZ(${RADIUS}px)`
 
         const norm = (((cardAngle % 360) + 360) % 360)
-        // 0 = front, 180 = back
-        const distFromFront = Math.min(norm, 360 - norm) // 0..180
-        const t = 1 - distFromFront / 180 // 1 front, 0 back
+        const distFromFront = Math.min(norm, 360 - norm)
+        const t = 1 - distFromFront / 180
         const scale = 0.55 + t * 0.45
         const opacity = 0.25 + t * 0.75
         const isFront = distFromFront < angleStep / 2
@@ -308,7 +307,6 @@ export default function Projects() {
         </p>
       </div>
 
-      {/* 3D stage */}
       <div
         ref={stageRef}
         className="relative w-full flex items-center justify-center"
@@ -322,7 +320,6 @@ export default function Projects() {
           userSelect: "none",
         }}
       >
-        {/* base glow / floor light */}
         <div
           className="absolute left-1/2 pointer-events-none"
           style={{

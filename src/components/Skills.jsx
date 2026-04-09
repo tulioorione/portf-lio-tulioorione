@@ -31,7 +31,6 @@ export default function Skills() {
       <div className="section-divider" />
 
       <div className="section-container">
-        {/* Section label */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -43,7 +42,6 @@ export default function Skills() {
           </span>
         </motion.div>
 
-        {/* Title */}
         <motion.h2
           className="font-grotesk font-black text-5xl md:text-7xl lg:text-8xl mt-6 tracking-tight leading-[0.9]"
           initial={{ opacity: 0, y: 40 }}
@@ -54,7 +52,6 @@ export default function Skills() {
           Tech <span className="text-outline">Stack</span>
         </motion.h2>
 
-        {/* Skill categories — gap: 48px */}
         <div
           className="mt-20 grid md:grid-cols-3"
           style={{ gap: 48 }}
@@ -71,7 +68,6 @@ export default function Skills() {
               <h3 className="font-mono text-xs text-accent uppercase tracking-widest mb-10">
                 {`{ ${category.category} }`}
               </h3>
-              {/* mb-32px (mb-8) between each skill item */}
               <div className="flex flex-col" style={{ gap: 32 }}>
                 {category.items.map((skill, i) => (
                   <SkillBar
