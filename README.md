@@ -111,5 +111,3 @@ Para usar como base do seu próprio portfólio, edite principalmente:
 Uso pessoal e educacional. Sinta-se à vontade para se inspirar, mas dê os devidos créditos ao utilizar como base.
 
 ---
-
-Feito com ❤️ por **Túlio Orione**
