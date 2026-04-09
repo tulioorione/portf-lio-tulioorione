@@ -9,7 +9,10 @@
       "Bash(npm install:*)",
       "Bash(mkdir -p src/components src/data src/styles)",
       "Bash(rm -f src/App.css src/index.css src/assets/react.svg public/vite.svg)",
-      "Bash(npx vite:*)"
+      "Bash(npx vite:*)",
+      "Bash(npm run:*)",
+      "Bash(npx --yes gh-pages@6 -d dist -b gh-pages -m \"deploy: build atualizado com base do Vite\")",
+      "Bash(npx --yes gh-pages@6 -d dist -b gh-pages -t -m \"deploy: rebuild com .nojekyll\")"
     ]
   }
 }
